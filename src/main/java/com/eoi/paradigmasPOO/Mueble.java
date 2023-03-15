@@ -1,6 +1,5 @@
-package com.example.paradigmaspoo;
+package com.eoi.paradigmasPOO;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 

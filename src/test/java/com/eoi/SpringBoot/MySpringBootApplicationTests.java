@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.eoi.SpringBoot;
 
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -12,9 +12,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 /**
  * The type Demo application tests.
  */
-@SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = MySpringBootApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Log4j2
-class DemoApplicationTests {
+class MySpringBootApplicationTests {
 
     @Autowired
     private TestRestTemplate template;
