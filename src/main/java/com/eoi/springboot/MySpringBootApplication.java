@@ -1,11 +1,11 @@
-package com.eoi.SpringBoot;
+package com.eoi.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
  /**
-  * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n SpringBoot
+  * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n springboot
   */
 @SpringBootApplication
 @RestController

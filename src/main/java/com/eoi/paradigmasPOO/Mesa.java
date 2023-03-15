@@ -44,10 +44,12 @@ public class Mesa extends Mueble {
 
     }
 
+
     public ComponenteDeMueble getPata1() {
         return pata1;
     }
 
+    //Inyección de dependencias por setter
     public void setPata1(ComponenteDeMueble pata1) {
         this.pata1 = pata1;
     }
@@ -56,6 +58,7 @@ public class Mesa extends Mueble {
         return pata2;
     }
 
+    //Inyección de dependencias por setter
     public void setPata2(ComponenteDeMueble pata2) {
         this.pata2 = pata2;
     }
@@ -64,6 +67,7 @@ public class Mesa extends Mueble {
         return pata3;
     }
 
+    //Inyección de dependencias por setter
     public void setPata3(ComponenteDeMueble pata3) {
         this.pata3 = pata3;
     }
@@ -80,6 +84,7 @@ public class Mesa extends Mueble {
         return tablero;
     }
 
+    //Inyección de dependencias por setter
     public void setTablero(ComponenteDeMueble tablero) {
         this.tablero = tablero;
     }
