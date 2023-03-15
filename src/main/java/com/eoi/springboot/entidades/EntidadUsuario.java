@@ -1,12 +1,10 @@
 package com.eoi.springboot.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
 
 @Entity
+@Table(name="Usuario")
 public class EntidadUsuario {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
