@@ -1,7 +1,10 @@
 package com.eoi.paradigmasPOO;
 
 /**
- * The type Objeto fisico.
+ * La clase Objeto fisico. Esta clase representa un concepto de objeto abstracto, en el que englobamos todos
+ * aquellos objetos que poseen propiedades físicas. Es un ejemplo del paradigma de ABSTRACCION.
+ *
+ *
  */
 public abstract class ObjetoFisico {
 
