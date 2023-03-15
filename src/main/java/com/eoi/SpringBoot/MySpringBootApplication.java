@@ -1,15 +1,15 @@
-package com.example.demo;
+package com.eoi.SpringBoot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * The type Demo application.
- */
+ /**
+  * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n SpringBoot
+  */
 @SpringBootApplication
 @RestController
-public class DemoApplication {
+public class MySpringBootApplication {
 
 	/**
 	 * The entry point of application.
@@ -17,16 +17,16 @@ public class DemoApplication {
 	 * @param args the input arguments
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(MySpringBootApplication.class, args);
 	}
 
 	/**
-	 * Hello main class string.
+	 * Hello main  string.
 	 *
-	 * @return the string
+	 * @return  el string por defecto "Main Class" para testear la aplicación
 	 */
 	@GetMapping("/")
-	String helloMainClass() {
+	String helloMain() {
 		return "Main class";
 	}
 

@@ -1,4 +1,4 @@
-package com.example.paradigmaspoo;
+package com.eoi.paradigmasPOO;
 
 /**
  * The type Pata standar.
