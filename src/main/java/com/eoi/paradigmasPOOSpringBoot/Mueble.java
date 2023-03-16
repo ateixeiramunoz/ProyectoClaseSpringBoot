@@ -1,5 +1,7 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmasPOOSpringBoot;
 
+import com.eoi.paradigmasPOOSpringBoot.ComponenteDeMueble;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import java.util.List;
 public abstract class Mueble extends ObjetoFisico {
 
     private String habitacion;
+
 
     /**
      * The Componentes.
@@ -78,4 +81,6 @@ public abstract class Mueble extends ObjetoFisico {
             o.showInfo();
         });
     }
+
+    public Mueble(){};
 }

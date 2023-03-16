@@ -1,12 +1,11 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmasPOOSpringBoot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/**
- * The type Mesa.
- */
-@Component
+import java.util.List;
+
+@Component(value="Mesa")
 public class Mesa extends Mueble {
 
     private ComponenteDeMueble pata1;
@@ -14,7 +13,6 @@ public class Mesa extends Mueble {
     private ComponenteDeMueble pata3;
     private ComponenteDeMueble pata4;
     private ComponenteDeMueble tablero;
-
 
 
     /**
@@ -33,8 +31,8 @@ public class Mesa extends Mueble {
      * @param pata4      the pata 4
      * @param tablero    the tablero
      */
-    @Autowired
-    protected Mesa(String nombre, int alto, int ancho, int fondo, int peso, String material, String habitacion, ComponenteDeMueble pata1, ComponenteDeMueble pata2, ComponenteDeMueble pata3, ComponenteDeMueble pata4, ComponenteDeMueble tablero) {
+
+    public Mesa(String nombre, int alto, int ancho, int fondo, int peso, String material, String habitacion, ComponenteDeMueble pata1, ComponenteDeMueble pata2, ComponenteDeMueble pata3, ComponenteDeMueble pata4, ComponenteDeMueble tablero) {
         super(nombre, alto, ancho, fondo, peso, material, habitacion);
         this.pata1 = pata1;
         this.pata2 = pata2;
@@ -46,6 +44,20 @@ public class Mesa extends Mueble {
         this.componentes.add(pata3);
         this.componentes.add(pata4);
         this.componentes.add(tablero);
+    }
+
+    public Mesa(String nombre, int alto, int ancho, int fondo, int peso, String material, String habitacion, List<ComponenteDeMueble> component) {
+        super(nombre, alto, ancho, fondo, peso, material, habitacion);
+        this.pata1 = pata1;
+        this.pata2 = pata2;
+        this.pata3 = pata3;
+        this.pata4 = pata4;
+        this.componentes = component;
+    }
+
+
+
+    public Mesa() {
     }
 
 }

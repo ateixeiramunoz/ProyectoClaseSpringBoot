@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmasPOOSpringBoot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,19 +10,19 @@ import org.springframework.stereotype.Component;
  *
  */
 
-@Component
 public abstract class ObjetoFisico {
-    @Autowired
+
+
     private String nombre;
-    @Autowired
+
     private int alto;
-    @Autowired
+
     private int ancho;
-    @Autowired
+
     private int fondo;
-    @Autowired
+
     private int peso;
-    @Autowired
+
     private String material;
 
     /**
@@ -35,7 +35,7 @@ public abstract class ObjetoFisico {
      * @param peso     the peso
      * @param material the material
      */
-    @Autowired
+
     protected ObjetoFisico(String nombre, int alto, int ancho, int fondo, int peso, String material) {
         this.nombre = nombre;
         this.alto = alto;
@@ -58,5 +58,7 @@ public abstract class ObjetoFisico {
                             "Peso:" + this.peso
         );
     }
+
+    public ObjetoFisico(){};
 
 }
