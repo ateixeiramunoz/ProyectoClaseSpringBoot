@@ -12,9 +12,13 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class DemoParadigmasPOOSpring implements CommandLineRunner {
 
+    //@Autowired
+    //@Qualifier("mesaGenial")
+    //private Mueble mesa;
+
     @Autowired
-    @Qualifier("mesaGenial")
-    private Mueble mesa;
+    @Qualifier("mesaRandom")
+    private Mueble mesaRandom;
 
 
     /**
@@ -32,7 +36,8 @@ public class DemoParadigmasPOOSpring implements CommandLineRunner {
     @Override
     public void run(String... args ) throws  Exception
     {
-        mesa.showInfo();
+        //mesa.showInfo();
+        mesaRandom.showInfo();
     }
 
 }

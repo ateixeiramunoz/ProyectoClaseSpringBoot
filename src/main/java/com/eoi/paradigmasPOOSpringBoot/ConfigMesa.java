@@ -13,6 +13,11 @@ import java.util.List;
 public class ConfigMesa {
 
     @Autowired
+    @Value("${mesa.materiales}")
+    private String[] materiales;
+
+
+    @Autowired
     @Value("${mesa.nombre}")
     private String nombre;
 
@@ -32,7 +37,6 @@ public class ConfigMesa {
     @Value("${mesa.peso}")
     private int peso;
 
-
     @Autowired
     @Value("${mesa.material}")
     private String material;
@@ -49,6 +53,11 @@ public class ConfigMesa {
     @Value("${mesa.numeropatas}")
     private int numeropatas;
 
+    @Bean
+    public ConfigPatas configpatas()
+    {
+        return new ConfigPatas();
+    }
 
     @Bean(value="mesaGenial")
     public Mesa mesa()
@@ -69,20 +78,18 @@ public class ConfigMesa {
     {
         List<ComponenteDeMueble> componentsList = new ArrayList<>();
         SecureRandom secureRandom = new SecureRandom();
-        numeropatas = secureRandom.nextInt(10);
+        numeropatas = secureRandom.nextInt(20);
         alto = secureRandom.nextInt(10);
         ancho = secureRandom.nextInt(10);
         fondo = secureRandom.nextInt(10);
         peso = secureRandom.nextInt(10);
-
-
         for (int a=0;a<numeropatas;a++)
         {
-            componentsList.add(new ConfigPatas().pataRandom());
+            componentsList.add(configpatas().pataRandom());
         }
 
         componentsList.add(new TableroStandar());
-        return new Mesa("Mesa RANDOM",alto, ancho, fondo, peso,material, habitacion, componentsList);
+        return new Mesa("Mesa RANDOM",alto, ancho, fondo, peso,materiales[secureRandom.nextInt(3)], habitacion, componentsList);
     }
 
 }

@@ -11,6 +11,10 @@ import java.security.SecureRandom;
 public class ConfigPatas {
 
     @Autowired
+    @Value("${pata.materiales}")
+    private String[] materiales;
+
+    @Autowired
     @Value("${pata.nombre}")
     private String nombre;
 
@@ -51,11 +55,9 @@ public class ConfigPatas {
     @Bean(value="pataRandom")
     public PataStandar pataRandom()
     {
+
         SecureRandom secureRandom = new SecureRandom();
-        return new PataStandar("Pata RANDOM",secureRandom.nextInt(10), secureRandom.nextInt(10), secureRandom.nextInt(10), secureRandom.nextInt(10),material, forma);
+        return new PataStandar("Pata RANDOM",secureRandom.nextInt(10), secureRandom.nextInt(10), secureRandom.nextInt(10), secureRandom.nextInt(10),materiales[secureRandom.nextInt(materiales.length)], forma);
     }
-
-
-
 
 }

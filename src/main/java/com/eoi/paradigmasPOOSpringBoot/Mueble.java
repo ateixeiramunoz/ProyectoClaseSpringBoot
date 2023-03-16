@@ -72,7 +72,9 @@ public abstract class Mueble extends ObjetoFisico {
 
     @Override
     public void showInfo() {
+        System.out.println("===========================================================");
         System.out.println("FICHA DE MUEBLE");
+        System.out.println("===========================================================");
         super.showInfo();
         System.out.println("Numero de componentes: " + componentes.size());
         System.out.println("Listado de Componentes: ");
