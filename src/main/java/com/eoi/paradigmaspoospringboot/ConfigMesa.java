@@ -56,6 +56,10 @@ public class ConfigMesa {
     @Value("${mesa.numeropatas}")
     private int numeropatas;
 
+    @Autowired
+    @Value("${mesa.maxnumeropatas}")
+    private int maxnumeropatas;
+
     /**
      * Configpatas config patas.
      *
@@ -96,7 +100,7 @@ public class ConfigMesa {
     {
         List<ComponenteDeMueble> componentsList = new ArrayList<>();
         SecureRandom secureRandom = new SecureRandom();
-        numeropatas = secureRandom.nextInt(20);
+        numeropatas = secureRandom.nextInt(maxnumeropatas);
         alto = secureRandom.nextInt(10);
         ancho = secureRandom.nextInt(10);
         fondo = secureRandom.nextInt(10);
