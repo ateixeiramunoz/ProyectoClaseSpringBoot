@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOOSpringBoot;
+package com.eoi.paradigmaspoospringboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,6 +9,9 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Config mesa.
+ */
 @Configuration
 public class ConfigMesa {
 
@@ -53,12 +56,22 @@ public class ConfigMesa {
     @Value("${mesa.numeropatas}")
     private int numeropatas;
 
+    /**
+     * Configpatas config patas.
+     *
+     * @return the config patas
+     */
     @Bean
     public ConfigPatas configpatas()
     {
         return new ConfigPatas();
     }
 
+    /**
+     * Mesa mesa.
+     *
+     * @return the mesa
+     */
     @Bean(value="mesaGenial")
     public Mesa mesa()
     {
@@ -73,6 +86,11 @@ public class ConfigMesa {
 
     }
 
+    /**
+     * Mesa random mesa.
+     *
+     * @return the mesa
+     */
     @Bean(value="mesaRandom")
     public Mesa mesaRandom()
     {
@@ -87,7 +105,6 @@ public class ConfigMesa {
         {
             componentsList.add(configpatas().pataRandom());
         }
-
         componentsList.add(new TableroStandar());
         return new Mesa("Mesa RANDOM",alto, ancho, fondo, peso,materiales[secureRandom.nextInt(3)], habitacion, componentsList);
     }

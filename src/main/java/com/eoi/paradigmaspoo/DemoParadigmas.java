@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoo;
 
 
 /**
@@ -24,8 +24,8 @@ public class DemoParadigmas {
         Mesa mesa1 = new Mesa("Mesa Bonita", 90, 100, 100, 15, "Madera","Salón", pata1, pata2, pata3, pata4, tablero);
         mesa1.showInfo();
 
-        Mesa mesaCristal = new Mesa("Mesa Bonita de cristal", 90, 100, 100, 15, "Madera y Cristal","Salón", pata1, pata2, pata3, pata4, tableroCristal);
-        mesaCristal.showInfo();
+        //Mesa mesaCristal = new Mesa("Mesa Bonita de cristal", 90, 100, 100, 15, "Madera y Cristal","Salón", pata1, pata2, pata3, pata4, tableroCristal);
+        //mesaCristal.showInfo();
 
     }
 

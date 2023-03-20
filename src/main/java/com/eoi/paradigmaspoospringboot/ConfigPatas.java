@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOOSpringBoot;
+package com.eoi.paradigmaspoospringboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.security.SecureRandom;
 
+/**
+ * The type Config patas.
+ */
 @Configuration
 public class ConfigPatas {
 
@@ -46,12 +49,22 @@ public class ConfigPatas {
     @Value("${pata.forma}")
     private String forma;
 
+    /**
+     * Pata pata standar.
+     *
+     * @return the pata standar
+     */
     @Bean(value="pataGenial")
     public PataStandar pata()
     {
         return new PataStandar(nombrePatagenial,alto, ancho, fondo, peso,material,forma);
     }
 
+    /**
+     * Pata random pata standar.
+     *
+     * @return the pata standar
+     */
     @Bean(value="pataRandom")
     public PataStandar pataRandom()
     {

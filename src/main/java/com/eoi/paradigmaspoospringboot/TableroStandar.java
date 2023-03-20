@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOOSpringBoot;
+package com.eoi.paradigmaspoospringboot;
 
 
 import org.springframework.stereotype.Component;

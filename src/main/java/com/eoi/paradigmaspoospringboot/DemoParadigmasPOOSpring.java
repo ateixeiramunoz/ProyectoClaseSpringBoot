@@ -1,10 +1,9 @@
-package com.eoi.paradigmasPOOSpringBoot;
+package com.eoi.paradigmaspoospringboot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 /**
  * The type Demo paradigmas.

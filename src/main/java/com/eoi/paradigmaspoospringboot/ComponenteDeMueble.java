@@ -1,8 +1,11 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoospringboot;
+
+import org.springframework.stereotype.Component;
 
 /**
  * The type Componente de mueble.
  */
+@Component
 public abstract class ComponenteDeMueble extends ObjetoFisico {
 
     private String color;
@@ -29,18 +32,43 @@ public abstract class ComponenteDeMueble extends ObjetoFisico {
         super.showInfo();
     }
 
+    /**
+     * Instantiates a new Componente de mueble.
+     */
+    protected ComponenteDeMueble(){};
+
+    /**
+     * Gets color.
+     *
+     * @return the color
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * Sets color.
+     *
+     * @param color the color
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * Gets posicion.
+     *
+     * @return the posicion
+     */
     public String getPosicion() {
         return posicion;
     }
 
+    /**
+     * Sets posicion.
+     *
+     * @param posicion the posicion
+     */
     public void setPosicion(String posicion) {
         this.posicion = posicion;
     }

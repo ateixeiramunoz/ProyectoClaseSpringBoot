@@ -1,20 +1,26 @@
-package com.eoi.paradigmasPOOSpringBoot;
+package com.eoi.paradigmaspoo;
 
-import com.eoi.paradigmasPOOSpringBoot.ComponenteDeMueble;
-import org.springframework.core.env.Environment;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Mueble.
+ * The type Mueble. La clase mueble comprende todos aquellos objetos físicos que tienen una habitación.
+ * Además, todos los objetos de la clase Mueble, tienen un ArrayList de Componentes de Mueble (ComponenteDeMueble.class)
  */
 @Component
+@Log4j2
 public abstract class Mueble extends ObjetoFisico {
 
-    private String habitacion;
 
+    /**
+     * Se utiliza para guardar el nombre de la habitación en la que se encuentra el mueble.
+     */
+    private String habitacion;
 
     /**
      * The Componentes.
@@ -70,11 +76,12 @@ public abstract class Mueble extends ObjetoFisico {
         this.componentes = componentes;
     }
 
+    /**
+     * El método showInfo muestra en pantalla la información básica de un Mueble
+     */
     @Override
     public void showInfo() {
-        System.out.println("===========================================================");
         System.out.println("FICHA DE MUEBLE");
-        System.out.println("===========================================================");
         super.showInfo();
         System.out.println("Numero de componentes: " + componentes.size());
         System.out.println("Listado de Componentes: ");
@@ -84,5 +91,25 @@ public abstract class Mueble extends ObjetoFisico {
         });
     }
 
-    public Mueble(){};
+    /**
+     * Pintar mueble.
+     *
+     * @param color El color del que queremos pintar el mueble. Los colores disponibles son amarillo, rojo, azul y verde.
+     * @return Devuelve un mensaje confirmando que el mueble ha sido pintado.
+     */
+    public String pintarMueble(String color) {
+
+        log.warn("YA HE PINTADO EL MUEBLE");
+        return "YA HE PINTADO EL MUEBLE";
+    }
+
+
+    public String getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoospringboot;
 
 import org.springframework.stereotype.Component;
 
@@ -12,6 +12,7 @@ import java.util.List;
 public abstract class Mueble extends ObjetoFisico {
 
     private String habitacion;
+
 
     /**
      * The Componentes.
@@ -69,7 +70,9 @@ public abstract class Mueble extends ObjetoFisico {
 
     @Override
     public void showInfo() {
+        System.out.println("===========================================================");
         System.out.println("FICHA DE MUEBLE");
+        System.out.println("===========================================================");
         super.showInfo();
         System.out.println("Numero de componentes: " + componentes.size());
         System.out.println("Listado de Componentes: ");
@@ -78,4 +81,9 @@ public abstract class Mueble extends ObjetoFisico {
             o.showInfo();
         });
     }
+
+    /**
+     * Instantiates a new Mueble.
+     */
+    public Mueble(){};
 }

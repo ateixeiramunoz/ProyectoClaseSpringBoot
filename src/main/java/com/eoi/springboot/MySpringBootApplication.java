@@ -4,9 +4,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
- /**
-  * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n springboot
-  */
+/**
+ * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n springboot
+ */
 @SpringBootApplication
 @RestController
 public class MySpringBootApplication {
@@ -23,7 +23,7 @@ public class MySpringBootApplication {
 	/**
 	 * Hello main  string.
 	 *
-	 * @return  el string por defecto "Main Class" para testear la aplicación
+	 * @return el string por defecto "Main Class" para testear la aplicación
 	 */
 	@GetMapping("/")
 	String helloMain() {
