@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.eoi.paradigmaspoo"},{"l":"com.eoi.paradigmasPOOSpringBoot"},{"l":"com.eoi.springboot"},{"l":"com.eoi.springboot.controllers"},{"l":"com.eoi.springboot.database"},{"l":"com.eoi.springboot.entidades"}];updateSearchResults();
