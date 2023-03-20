@@ -4,6 +4,8 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.origin.SystemEnvironmentOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Log4j2
+@RequestMapping("${url.usuarios}")
 public class ControladorUsuarios {
     @Value("${mensaje.pastillas}")
     private String mensajeMedicacion;
     @Value("${mensaje.hola}")
     private String mensajeHola;
-
 
     /**
      * Hola string.

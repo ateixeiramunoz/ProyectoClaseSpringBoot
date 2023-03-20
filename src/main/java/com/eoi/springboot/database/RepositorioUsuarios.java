@@ -2,7 +2,6 @@ package com.eoi.springboot.database;
 import com.eoi.springboot.entidades.EntidadUsuario;
 import org.springframework.data.repository.CrudRepository;
 
-
 /**
  * The interface Repositorio usuarios.
  */
